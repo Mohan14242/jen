@@ -9,7 +9,21 @@ pipeline {
         }
         stage('intergration testing stage'){
             steps{
-                echo "this is the interation between the all stages"
+                nexusArtifactUploader{
+                    nexusVersion: 'nexus3',
+                    protocol: 'http',
+                    nexusUrl: '34.229.189.0:8081/repository/catalogue/',
+                    groupId: 'com.mohan',
+                    version: '402.1.0',
+                    repository:'catalogue',
+                    credentialsId: 'nexus-auth',
+                    Artifacts: [
+                        [ArtifactId:'catalogue',
+                        classifier: '',
+                        file:'mohan.zip',
+                        type:'zip']
+                    ]
+                }
             }
         }
         stage('this is the best way to do the pipeline'){
@@ -26,3 +40,7 @@ pipeline {
 
     }
 }
+
+
+Your admin user password is located in
+/home/nexus/sonatype-work/nexus3/admin.password
