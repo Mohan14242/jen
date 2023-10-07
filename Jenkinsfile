@@ -4,7 +4,7 @@ pipeline {
     stages{
         stage('unit testting '){
             steps{
-                echo "this is the unit testting stage"
+                sh 'zip -r ./*'
             }
         }
         stage('intergration testing stage'){
