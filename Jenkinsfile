@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { node { label 'mohan'}}
 
     stages{
         stage('unit testting '){
