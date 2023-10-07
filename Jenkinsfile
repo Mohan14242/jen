@@ -41,6 +41,3 @@ pipeline {
     }
 }
 
-
-Your admin user password is located in
-/home/nexus/sonatype-work/nexus3/admin.password
