@@ -17,8 +17,8 @@ pipeline {
                     version: '402.1.0',
                     repository:'catalogue',
                     credentialsId: 'nexus-auth',
-                    Artifacts: [
-                        [ArtifactId:'catalogue',
+                    artifacts: [
+                        [artifactId:'catalogue',
                         classifier: '',
                         file:'mohan.zip',
                         type:'zip']
