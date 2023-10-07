@@ -4,7 +4,7 @@ pipeline {
     stages{
         stage('unit testting '){
             steps{
-                sh 'zip -r ./*'
+                sh 'zip -r mohan.zip ./*'
             }
         }
         stage('intergration testing stage'){
