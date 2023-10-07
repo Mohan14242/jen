@@ -17,6 +17,11 @@ pipeline {
                 echo "please enter the way you want"
             }
         }
+        stage('this is the chiru'){
+            steps{
+                echo 'this is the mohan'
+            }
+        }
 
 
     }
