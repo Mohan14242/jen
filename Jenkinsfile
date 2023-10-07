@@ -9,7 +9,7 @@ pipeline {
         }
         stage('intergration testing stage'){
             steps{
-                nexusArtifactUploader{
+                nexusArtifactUploader(
                     nexusVersion:'nexus3',
                     protocol:'http',
                     nexusUrl:'34.229.189.0:8081/repository/catalogue/',
@@ -19,11 +19,11 @@ pipeline {
                     credentialsId:'nexus-auth',
                     artifacts: [
                         [artifactId:'catalogue',
-                        classifier:'',
+                        classifier: '',
                         file:'mohan.zip',
                         type:'zip']
                     ]
-                }
+                )
             }
         }
         stage('this is the best way to do the pipeline'){
