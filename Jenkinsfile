@@ -14,7 +14,7 @@ pipeline {
                     protocol:'http',
                     nexusUrl:'34.229.189.0:8081/repository/catalogue/',
                     groupId:'com.mohan',
-                    version:'402.1.0',
+                    version:'402.1',
                     repository:'catalogue',
                     credentialsId:'nexus-auth',
                     artifacts: [
